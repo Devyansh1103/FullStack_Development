@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+        .container{
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: auto;
+            gap: 15px;
+        }
+        .container>div{
+            outline: 1px solid black;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius: 10px;
+        }
+        #box1{
+            grid-column: 1/-1;
+            background-color:teal;
+            color:white;
+
+        }
+        #box2{
+            grid-row: 2/4;
+            background-color:orange;
+        }
+        #box3{
+            grid-column: 2/-1;
+            background-color:lightblue;
+        }
+        #box4,#box5,#box6{
+            grid-row: 3/4;
+            background-color:lightgreen;
+        }
+        #box7{
+            grid-column: 1/-1;
+            background-color:lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dashboard Layout</h2>
+    <div class="container">
+        <div id="box1">HEADER</div>
+        <div id="box2">SIDEBAR</div>
+        <div id="box3">MAIN CONTENT</div>
+        <div id="box4">CARD 1</div>
+        <div id="box5">CARD 2</div>
+        <div id="box6">CARD 3</div>
+        <div id="box7">FOOTER</div>
+    </div>
+</body>
+</html>
