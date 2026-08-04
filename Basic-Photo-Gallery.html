@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Galley</title>
+    <style>
+        .container{
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: auto;
+            gap: 15px;
+        }
+        .container>div{
+            outline: 1px solid black;
+            border-radius: 10px;
+            background-color:teal;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Basic Photo Gallery</h1>
+    <div class = "container">
+        <div id="box1">1.</div>
+        <div id="box2">2.</div>
+        <div id="box3">3.</div>
+        <div id="box4">4.</div>
+        <div id="box5">5.</div>
+        <div id="box6">6.</div>
+        <div id="box7">7.</div>
+        <div id="box8">8.</div>
+        <div id="box9">9.</div>
+        <div id="box10">10.</div>
+        <div id="box11">11.</div>
+        <div id="box12">12.</div>
+    </div>
+</body>
+</html>
