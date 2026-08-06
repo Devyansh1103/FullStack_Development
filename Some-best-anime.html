@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Some best anime</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+}
+
+.container{
+    width:100%;
+}
+
+.slide{
+    position:sticky;
+    top:10px;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    border-radius: 25px;
+}
+
+
+.slide img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.75);
+    transition:0.5s;
+}
+
+
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.8),
+        transparent
+    );
+}
+
+
+.slide h1{
+    position:relative;
+    z-index:2;
+    color:white;
+    font-size:50px;
+    padding:40px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    background: linear-gradient(90deg,white,cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 3px 4px 3px black;
+}
+
+.spacer{
+    height:100vh;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="slide">
+    <img src="https://assets.teenvogue.com/photos/6832f577e38e8046f3ebe463/16:9/w_2560%2Cc_limit/sl_kv_prt3_draft-1_en_3_RGB.jpg">
+    <h1>Solo leveling</h1>
+</div>
+
+<div class="spacer"></div>
+
+
+<div class="slide">
+    <img src="https://www.livemint.com/lm-img/img/2026/05/24/600x338/my_hero_academia_1779631422514_1779631422714_3ca51790-ffae-4548-a15d-139da9688f5d.jpg">
+    <h1>My Hero Academia</h1>
+</div>
+
+<div class="spacer"></div>
+
+
+<div class="slide">
+    <img src="https://p325k7wa.twic.pics/high/jujutsu-kaisen/jujutsu-kaisen-cursed-clash/00-page-setup/JJK-header-mobile2.jpg?twic=v1/resize=760/step=10/quality=80">
+    <h1>Jujutsu Kaisen</h1>
+</div>
+
+<div class="spacer"></div>
+
+
+<div class="slide">
+    <img src="https://i.redd.it/what-will-get-anime-of-the-year-and-best-continuing-anime-v0-5kc8wz3nd50e1.jpg?width=1024&format=pjpg&auto=webp&s=5f8150a4574cc84d1229f0c4cae4c00ecbe9c3c0">
+    <h1>One Piece</h1>
+</div>
+
+
+</div>
+
+
+</body>
+</html>
