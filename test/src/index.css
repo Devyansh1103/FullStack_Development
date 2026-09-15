@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@theme {
+  --breakpoint-md:30rem;
+}
+.heading{
+    @apply text-3xl font-bold underline text-blue-300;
+}
