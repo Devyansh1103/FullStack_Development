@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a Mole</title>
+    <script>
+        let score = 0;
+        let mole = document.getElementById('mole');
+        let scoreElement = document.getElementById('score');
+        let moleTimeout;
+        function showMole() {
+            const gameArea = document.getElementById('gameArea');
+            const x = Math.random() * (gameArea.offsetWidth - mole.offsetWidth);
+            const y = Math.random() * (gameArea.offsetHeight - mole.offsetHeight);
+            mole.style.left = `${x}px`;
+            mole.style.top = `${y}px`;
+            mole.style.display = 'block';
+
+            moleTimeout = setTimeout(() => {
+                mole.style.display = 'none';
+                showMole();
+            }, 800);
+
+        }
+        showMole();
+        function whackMole() {
+            score++;
+            scoreElement.innerText = `Score: ${score}`;
+            mole.style.display = 'none';
+            clearTimeout(moleTimeout);
+            showMole();
+        }
+        function init() {
+            mole.addEventListener('click', whackMole);
+        }
+        init();
+
+    </script>
+</head>
+<body>
+    <h1>Whack a Mole</h1>
+    <p>Click on the mole when it appears!</p>
+    <div id="gameArea" style="position: relative; width: 300px; height: 300px; border: 1px solid black;">
+        <div id="mole" style="position: absolute; width: 50px; height: 50px; background-color: brown; display: none;"></div>    
+    </div>
+    <p id="score">Score: 0</p>
+
+</body>
+</html>
